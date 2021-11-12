@@ -24,6 +24,7 @@
   <h4>This is heading for h4</h4>
 </div> -->
 
+<!-- 
 <br>
 <br>
 <button mat-button>mat-button</button>
@@ -63,4 +64,20 @@
   <button color="primary" disableRipple mat-raised-button>class="primary"</button>
   <button color="accent" disableRipple mat-raised-button>class="accent"</button>
   <button color="warn" disableRipple mat-raised-button>class="warn"</button>
+</div> -->
+
+<br>
+<br>
+<div class="mat-body-2">
+  <p class="mat-title"> Toggle Buttons: </p>
+
+  <mat-button-toggle #toggleBtn checked disableRipple disabled> button toggle </mat-button-toggle>
+  {{ toggleBtn.checked }}
+
+  <mat-button-toggle-group #toggleGroup ="matButtonToggleGroup" multiple>
+    <mat-button-toggle value="Angualr">Angualr</mat-button-toggle>
+    <mat-button-toggle value="React">React</mat-button-toggle>
+    <mat-button-toggle value="Vue">Vue</mat-button-toggle>
+  </mat-button-toggle-group>
+  {{ toggleGroup.value }}
 </div>
