@@ -1,6 +1,8 @@
 <!-- <button mat-button>mat-button</button>
 <button mat-raised-button>mat-raised-button</button> -->
 
+
+
 <!-- <br>
 <div class="mat-display-4">class="mat-display-4"</div>
 <div class="mat-display-3">class="mat-display-3"</div>
@@ -24,6 +26,9 @@
   <h4>This is heading for h4</h4>
 </div> -->
 
+
+
+
 <!-- 
 <br>
 <br>
@@ -31,7 +36,6 @@
 <button mat-raised-button>mat-raised-button</button>
 <button mat-flat-button>mat-flat-button</button>
 <button mat-stroked-button>mat-stroked-button</button>
-
 <br>
 <br>
 <div>
@@ -40,7 +44,6 @@
   <button mat-fab>fab</button>
   <button mat-mini-fab>mini</button>
 </div>
-
 <br>
 <br>
 <div>
@@ -66,6 +69,9 @@
   <button color="warn" disableRipple mat-raised-button>class="warn"</button>
 </div> -->
 
+
+
+
 <!-- <br>
 <br>
 <div class="mat-body-2">
@@ -82,6 +88,9 @@
   {{ toggleGroup.value }}
 </div> -->
 
+
+
+<!-- 
 <div class="mat-headline">
   <p class="mat-title">Icons</p>
 
@@ -92,4 +101,40 @@
   <mat-icon>account_balance</mat-icon>
   <mat-icon>offline_pin</mat-icon>
   <mat-icon>pan_tool</mat-icon>
+</div> -->
+
+
+
+<p class="mat-title">Badges positions:</p>
+<div>
+  <span [matBadge]="notifications" [matBadgeHidden]="notifications === 0">Notifications</span>
+</div>
+<div>
+  <span matBadge="5" matBadgePosition="below before">Notifications</span>
+</div>
+<div>
+  <span matBadge="5" matBadgePosition="below after">Notifications</span>
+</div>
+<div>
+  <span matBadge="5" matBadgePosition="above before">Notifications</span>
+</div>
+<p class="mat-title">Badges size:</p>
+<div>
+  <span matBadge="5" matBadgeSize="small">Notifications</span>
+</div>
+<div>
+  <span matBadge="5" matBadgeSize="medium">Notifications</span>
+</div>
+<div>
+  <span matBadge="5" matBadgeSize="large">Notifications</span>
+</div>
+<p class="mat-title">Badges color:</p>
+<div>
+  <span matBadge="5" matBadgeColor="primary">Notifications</span>
+</div>
+<div>
+  <span matBadge="5" matBadgeColor="accent">Notifications</span>
+</div>
+<div>
+  <span matBadge="5" matBadgeColor="warn" matBadgeOverlap="false">Notifications</span>
 </div>
