@@ -9,3 +9,27 @@ button {
 span {
     padding-right: 1rem;
 }
+
+mat-sidenav-container {
+    height: 100%;
+}
+
+mat-sidenav,
+mat-sidenav-content {
+    padding: 16px;
+}
+
+mat-sidenav {
+    background-color: lightcoral;
+    width           : 200px;
+}
+
+mat-drawer-container {
+    height: 100%;
+}
+
+mat-drawer {
+    background-color: lightcoral;
+    width           : 300px;
+    padding         : 16px;
+}
