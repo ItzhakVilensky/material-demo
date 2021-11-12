@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'material';
   notifications = 0;
+  showSpinner = false;
+
+  loadData() {
+    this.showSpinner = true;
+    setTimeout(() => {
+      this.showSpinner = false;
+    }, 3000);
+  }
 }
