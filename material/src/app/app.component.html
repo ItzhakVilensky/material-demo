@@ -304,11 +304,21 @@
 
 
 
-<p class="mat-subheading-2">Cards: </p>
+<!-- <p class="mat-subheading-2">Cards: </p>
 <mat-card>
   <mat-card-title>Card title</mat-card-title>
   <mat-card-content> Card content </mat-card-content>
   <mat-card-actions align="end">
     <button mat-stroked-button>Log in</button>
   </mat-card-actions>
-</mat-card>
+</mat-card> -->
+
+
+
+<p class="mat-subheading-2">Tabs: </p>
+<mat-tab-group #tabsRef (selectedTabChange)="logChange($event)">
+  <mat-tab label="Angular">Angular</mat-tab>
+  <mat-tab label="React">React</mat-tab>
+  <mat-tab label="Vue">Vue</mat-tab>
+</mat-tab-group>
+{{ tabsRef.selectedIndex }}
