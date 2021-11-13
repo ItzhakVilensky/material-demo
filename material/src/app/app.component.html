@@ -194,4 +194,36 @@
   </div>
 </mat-drawer-container>  -->
 
-<p class="mat-subheading-2">Menus: 57:39</p>
+<p class="mat-subheading-2">Menus: </p>
+<mat-menu #menu="matMenu" xPosition="before" yPosition="below">
+  <button mat-menu-item [matMenuTriggerFor]="subMenu">
+    <mat-icon>dialpad</mat-icon>
+    <span>BackEnd</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>dialpad</mat-icon>
+    <span>FrontEnd</span>
+  </button>
+</mat-menu>
+
+<mat-menu #subMenu="matMenu"  xPosition="after" yPosition="above">
+  <button mat-menu-item> Angular </button>
+  <button mat-menu-item> React </button>
+  <button mat-menu-item> Vue </button>
+</mat-menu>
+
+<button mat-flat-button [matMenuTriggerFor]="menu" class="center"> Open menu
+</button>
+
+<mat-menu #lazyMenu="matMenu">
+  <ng-template matMenuContent let-name="name" let-hobby="hobby">
+    <button mat-menu-item> Settings</button>
+    <button mat-menu-item> Hobby - {{ hobby }}</button>
+    <button mat-menu-item> Log out {{ name }}</button>
+  </ng-template>
+</mat-menu>
+
+<button mat-rasied-button [matMenuTriggerData]="{name: 'mark', hobby: 'football'}" [matMenuTriggerFor]="lazyMenu"> mark
+</button>
+<button mat-rasied-button [matMenuTriggerData]="{name: 'john', hobby: 'coding'}" [matMenuTriggerFor]="lazyMenu"> john
+</button>
