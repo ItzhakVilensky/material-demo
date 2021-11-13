@@ -17,7 +17,7 @@
 <div class="mat-title">class="mat-title" h2</div>
 <div class="mat-subheading-2">class="mat-subheading-2" h3</div>
 <div class="mat-subheading-1">class="mat-subheading-1" h4</div>
-<br>
+
 <div class="mat-typography">
   <div>class="mat-typography":</div>
   <h1>This is heading for h1</h1>
@@ -72,8 +72,8 @@
 
 
 
-<!-- <br>
-<br>
+<!--  <p class="mat-title"> Toggle Buttons: </p>
+
 <div class="mat-body-2">
   <p class="mat-title"> Toggle Buttons: </p>
 
@@ -90,10 +90,11 @@
 
 
 
-<!-- 
+
+<!--  <p class="mat-title">Icons</p>
+
 <div class="mat-headline">
   <p class="mat-title">Icons</p>
-
   <mat-icon></mat-icon>
   <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
   <mat-icon aria-hidden="false" aria-label="Example home icon">lock</mat-icon>
@@ -104,8 +105,10 @@
 </div> -->
 
 
-<!-- 
-<p class="mat-title">Badges positions:</p>
+
+
+<!-- <p class="mat-title">Badges positions:</p>
+
 <div>
   <span [matBadge]="notifications" [matBadgeHidden]="notifications === 0">Notifications</span>
 </div>
@@ -141,7 +144,9 @@
 
 
 
+
 <!-- <p class="mat-caption">Progress spinner:</p>
+
 <mat-progress-spinner value="40"></mat-progress-spinner>
 <mat-progress-spinner value="100"></mat-progress-spinner>
 
@@ -152,6 +157,7 @@
 
 
 <!-- <p class="mat-subheading-2">Navbar:</p>
+
 <mat-toolbar color="primary" class="navbar">
   <div>mat-toolbar</div>
   <div>
@@ -165,6 +171,7 @@
 
 
 <!-- <p class="mat-subheading-2">Sidenav:</p>
+
 <mat-sidenav-container>
   <mat-sidenav #sidenav 
                 mode="side"
@@ -194,7 +201,12 @@
   </div>
 </mat-drawer-container>  -->
 
+
+
+
+
 <!-- <p class="mat-subheading-2">Menus: </p>
+
 <mat-menu #menu="matMenu" xPosition="before" yPosition="below">
   <button mat-menu-item [matMenuTriggerFor]="subMenu">
     <mat-icon>dialpad</mat-icon>
@@ -228,6 +240,10 @@
 <button mat-rasied-button [matMenuTriggerData]="{name: 'john', hobby: 'coding'}" [matMenuTriggerFor]="lazyMenu"> john
 </button> -->
 
+
+
+
+
 <!-- <p class="mat-subheading-2">Lists: </p>
 
 <mat-list dense>
@@ -257,8 +273,8 @@
 </mat-list> -->
 
 
-<!-- 
-<p class="mat-subheading-2">Grids: </p>
+<!-- <p class="mat-subheading-2">Grids: </p>
+
 <mat-grid-list cols="2" rowHeight="fit" style="height: 200px" gutterSize="20px">
   <mat-grid-tile rowspan="2">Tile 1</mat-grid-tile>
   <mat-grid-tile>Tile 2</mat-grid-tile>
@@ -305,6 +321,7 @@
 
 
 <!-- <p class="mat-subheading-2">Cards: </p>
+
 <mat-card>
   <mat-card-title>Card title</mat-card-title>
   <mat-card-content> Card content </mat-card-content>
@@ -316,6 +333,7 @@
 
 
 <!-- <p class="mat-subheading-2">Tabs: </p>
+
 <mat-tab-group #tabsRef (selectedTabChange)="logChange($event)">
   <mat-tab label="Angular">Angular</mat-tab>
   <mat-tab label="React">React</mat-tab>
@@ -345,6 +363,7 @@
 
 
 <!-- <p class="mat-subheading-2">Input: </p>
+
 <mat-form-field floatLabel="auto" hideRequiredMarker appearance="fill" color="accent">
   <mat-label>Name</mat-label>
   <input type="text" matInput required>
@@ -360,7 +379,7 @@
 
 
 
-<p class="mat-subheading-2">Select: </p>
+<!-- <p class="mat-subheading-2">Select: </p>
 
 <mat-form-field>
   <mat-label> Topic </mat-label>
@@ -378,4 +397,21 @@
     </mat-optgroup>
   </mat-select>
 </mat-form-field>
-{{ selectedValue }}
+{{ selectedValue }} -->
+
+
+
+
+<p class="mat-subheading-2">Autocomplete: </p>
+
+<form>
+  <mat-form-field>
+    <input type="text" matInput [matAutocomplete]="auto" [formControl]="myControl">
+
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{ option }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
