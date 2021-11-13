@@ -23,6 +23,12 @@ export class AppComponent implements OnInit {
     { name: 'Vue' }]
   myControl = new FormControl();
   filteredOptions: Observable<string[]> = new Observable<string[]>();
+  minDate = new Date();
+  maxDate = new Date(2030, 1, 1);
+  dateFilter = (date: any) => {
+    const day = date.getDay();
+    return day !== 0 && day !== 6;
+  }
 
   ngOnInit(): void {
     this.filteredOptions = this.myControl.valueChanges.pipe(

@@ -421,7 +421,7 @@
 
 
 
-<p class="mat-subheading-2">Checkbox & Radio button: </p>
+<!-- <p class="mat-subheading-2">Checkbox & Radio button: </p>
 
 <mat-checkbox>
   Subscribe
@@ -444,4 +444,15 @@
   <mat-radio-button value="radio 1">radio 1</mat-radio-button>
   <mat-radio-button value="radio 2">radio 2</mat-radio-button>
   <mat-radio-button value="radio 3" color="warn">radio 3</mat-radio-button>
-</mat-radio-group>
+</mat-radio-group> -->
+
+
+
+
+<p class="mat-subheading-2">Date picker: </p>
+
+<mat-form-field>
+  <input matInput [matDatepicker]="datePickerRef" [matDatepickerFilter]="dateFilter">
+  <mat-datepicker-toggle [for]="datePickerRef" matSuffix> </mat-datepicker-toggle>
+  <mat-datepicker #datePickerRef ></mat-datepicker>
+</mat-form-field>
