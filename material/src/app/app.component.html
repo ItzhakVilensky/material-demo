@@ -228,7 +228,7 @@
 <button mat-rasied-button [matMenuTriggerData]="{name: 'john', hobby: 'coding'}" [matMenuTriggerFor]="lazyMenu"> john
 </button> -->
 
-<p class="mat-subheading-2">Lists: </p>
+<!-- <p class="mat-subheading-2">Lists: </p>
 
 <mat-list dense>
   <mat-list-item>Item 1</mat-list-item>
@@ -254,4 +254,14 @@
     <h3 matLine>Heading 2</h3>
     <p matLine>Paragraph 2</p>
   </mat-list-item>
-</mat-list>
+</mat-list> -->
+
+
+
+<p class="mat-subheading-2">Grids: </p>
+<mat-grid-list cols="2" rowHeight="fit" style="height: 200px" gutterSize="20px">
+  <mat-grid-tile rowspan="2">Tile 1</mat-grid-tile>
+  <mat-grid-tile>Tile 2</mat-grid-tile>
+  <mat-grid-tile>Tile 3</mat-grid-tile>
+  <mat-grid-tile colspan="2">Tile 4</mat-grid-tile>
+</mat-grid-list>
