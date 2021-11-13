@@ -257,11 +257,48 @@
 </mat-list> -->
 
 
-
+<!-- 
 <p class="mat-subheading-2">Grids: </p>
 <mat-grid-list cols="2" rowHeight="fit" style="height: 200px" gutterSize="20px">
   <mat-grid-tile rowspan="2">Tile 1</mat-grid-tile>
   <mat-grid-tile>Tile 2</mat-grid-tile>
   <mat-grid-tile>Tile 3</mat-grid-tile>
   <mat-grid-tile colspan="2">Tile 4</mat-grid-tile>
-</mat-grid-list>
+</mat-grid-list> -->
+
+
+
+<p class="mat-subheading-2">Expansion Panel: </p>
+
+<mat-accordion multi="true">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        mat-panel-title 1
+      </mat-panel-title>
+      <mat-panel-description>
+        mat-panel-description 1 mat-panel-description 1 mat-panel-description 1
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>Paragraph content 1</p>
+    <mat-action-row>
+      <button mat-flat-button>me button 1</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+  
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        mat-panel-title 2
+      </mat-panel-title>
+      <mat-panel-description>
+        mat-panel-description 2 mat-panel-description 2 mat-panel-description 2
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>Paragraph content 2</p>
+    <mat-action-row>
+      <button mat-flat-button>me button 2</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+
