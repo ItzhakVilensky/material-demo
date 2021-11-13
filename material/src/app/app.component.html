@@ -344,8 +344,7 @@
 
 
 
-<p class="mat-subheading-2">Input: </p>
-
+<!-- <p class="mat-subheading-2">Input: </p>
 <mat-form-field floatLabel="auto" hideRequiredMarker appearance="fill" color="accent">
   <mat-label>Name</mat-label>
   <input type="text" matInput required>
@@ -356,4 +355,27 @@
   <mat-label>Name</mat-label>
   <input type="text" matInput required>
   <mat-hint align="start">Min. 5 chars</mat-hint>
+</mat-form-field> -->
+
+
+
+
+<p class="mat-subheading-2">Select: </p>
+
+<mat-form-field>
+  <mat-label> Topic </mat-label>
+  <mat-select [(value)]="selectedValue" multiple>
+    <mat-option>NONE</mat-option>
+    <mat-optgroup label="web">
+      <mat-option value="opt 1">option 1</mat-option>
+      <mat-option value="opt 2">option 2</mat-option>
+      <mat-option value="opt 3">option 3</mat-option>
+    </mat-optgroup>
+    <mat-optgroup label="mobile">
+      <mat-option value="opt 1">option 1</mat-option>
+      <mat-option value="opt 2">option 2</mat-option>
+      <mat-option value="opt 3">option 3</mat-option>
+    </mat-optgroup>
+  </mat-select>
 </mat-form-field>
+{{ selectedValue }}

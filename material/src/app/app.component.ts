@@ -11,6 +11,7 @@ export class AppComponent {
   showSpinner = false;
   opened = false;
   showFiller = false;
+  selectedValue: string ='';
 
   loadData() {
     this.showSpinner = true;
@@ -23,7 +24,7 @@ export class AppComponent {
     console.log('state: ', state);
   }
 
-  logChange(ev: any){
+  logChange(ev: any) {
     console.log('ev: ', ev);
   }
 }
