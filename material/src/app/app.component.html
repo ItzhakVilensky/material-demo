@@ -315,10 +315,29 @@
 
 
 
-<p class="mat-subheading-2">Tabs: </p>
+<!-- <p class="mat-subheading-2">Tabs: </p>
 <mat-tab-group #tabsRef (selectedTabChange)="logChange($event)">
   <mat-tab label="Angular">Angular</mat-tab>
   <mat-tab label="React">React</mat-tab>
   <mat-tab label="Vue">Vue</mat-tab>
 </mat-tab-group>
-{{ tabsRef.selectedIndex }}
+{{ tabsRef.selectedIndex }} -->
+
+
+<p class="mat-subheading-2">Stepper: </p>
+
+<mat-vertical-stepper linear>
+  <mat-step label="Shipping address" completed="true">
+    <p>Shipping address details</p>
+  </mat-step>
+  <mat-step label="Billing address" completed="false" optional>
+    <p>Billing address details</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <mat-step label="Place order" completed="false">
+    <p>Place order details</p>
+  </mat-step>
+</mat-vertical-stepper>
