@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { startWith, map } from 'rxjs/operators';
 
@@ -37,6 +38,9 @@ export class AppComponent implements OnInit {
     );
   }
 
+  constructor(private snackBar: MatSnackBar) {
+  }
+
   private customFilter(value: string): string[] {
     const filterValue = value.toLowerCase();
     return this.options.filter(option => option.toLowerCase().includes(filterValue));
@@ -60,4 +64,28 @@ export class AppComponent implements OnInit {
   logChange(ev: any) {
     console.log('ev: ', ev);
   }
+
+  openSnackBar(message: string, action: string) {
+    // action = Dismiss
+    const snackBarRef = this.snackBar.open(message, action, { duration: 2000 });
+    snackBarRef.afterDismissed().subscribe(() => {
+      console.log('Was dismissed');
+    });
+
+    snackBarRef.onAction().subscribe(() => {
+      console.log('On Action');
+    });
+  }
+
+  openCustomSnackBar() {
+    this.snackBar.openFromComponent(CustomSnackBarComponent, { duration: 2000 });
+  }
+}
+
+@Component({
+  selector: 'custom-snackbar',
+  template: `<span style="color: orange"> Custom Snackbar </span>`
+})
+export class CustomSnackBarComponent {
+
 }
