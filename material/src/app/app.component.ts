@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
 import { startWith, map } from 'rxjs/operators';
+import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 
 @Component({
   selector: 'app-root',
@@ -38,7 +40,9 @@ export class AppComponent implements OnInit {
     );
   }
 
-  constructor(private snackBar: MatSnackBar) {
+  constructor(
+    private snackBar: MatSnackBar,
+    public dialog: MatDialog) {
   }
 
   private customFilter(value: string): string[] {
@@ -79,6 +83,14 @@ export class AppComponent implements OnInit {
 
   openCustomSnackBar() {
     this.snackBar.openFromComponent(CustomSnackBarComponent, { duration: 2000 });
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(DialogExampleComponent, { data: { name: 'developer' } });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('result: ', result);
+    });
   }
 }
 
